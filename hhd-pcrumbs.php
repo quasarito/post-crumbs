@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Post Crumbs
-Plugin URI:  
+Plugin URI:  https://wordpress.org/plugins/post-crumbs
 Description: Creates a signature (crumb) for your posts that can be used to track copied/stolen content. See Tools menu for configuration options.
-Version:     0.170305
+Version:     0.180121
 Author:      Huy Duong
-Author URI:  https://huyduong.com
+Author URI:  https://github.com/quasarito/post-crumbs
 License:     GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
@@ -347,6 +347,12 @@ add_action("init", "hhdpc_shortcode_init");
 // of all posts is enabled
 function hhdpc_auto_append_crumb($content)
 {
+    if (is_home())
+    {
+        // do not display hash on blog posts index page
+        return $content;
+    }
+
     $post = get_post();
     $hash_meta = get_post_meta($post->ID, HHDPC_HASH_CRUMB, true);
 

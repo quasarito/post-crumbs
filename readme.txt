@@ -2,12 +2,12 @@
 Contributors: quasarito
 Tags: copyright, hash, copying, freeboot, piracy
 Requires at least: 3.1.0
-Tested up to: 4.7.2
+Tested up to: 4.9.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Creates a signature (crumb) for your posts that can be used to track copied/stolen content.
+Creates a signature (crumb) for your posts that can be used to track copied/infringed content.
 
 == Description ==
 
@@ -63,3 +63,6 @@ Sure. You can find the code repository here: https://github.com/quasarito/post-c
 
 = 0.170305 =
 * Initial version of Post Crumbs.
+
+= 0.180121 -
+* Do not display crumb on blog posts index page.
